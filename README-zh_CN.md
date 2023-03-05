@@ -72,7 +72,7 @@ npm i reduce-enum-webpack-plugin -D
  ## 🔨 使用
 
 ```js
-const RuduceEnumWebpackPlugin = require('reduce-enum-webpack-plugin')
+const RuduceEnumWebpackPlugin = require('reduce-enum-webpack-plugin').default
 
 // webpack.config.js
 

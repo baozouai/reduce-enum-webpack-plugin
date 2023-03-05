@@ -21,7 +21,7 @@
     "clean": "rm -rf dist",
     "lint": "eslint --cache --fix",
     "build": "tsc",
-    "release": "np",
+    "release": "npm run clean && npm run build && np",
     "prepare": "husky install"
   },
   "husky": {
