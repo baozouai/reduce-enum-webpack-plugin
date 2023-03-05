@@ -1,0 +1,64 @@
+{
+  "name": "reduce-enum-webpack-plugin",
+  "version": "1.0.0-beta.0",
+  "author": "baozouai <baozouai@gmail.com>",
+  "description": "将ts enum 转 js 的产物减少一半，e[e['xxx']=0]='xxx'] => e['xxx']=0,e[e.xxx=0]='xxx' => e.xxx=0",
+  "homepage": "https://github.com/baozouai/reduce-enum-webpack-plugin",
+  "main": "dist/reduce-enum-webpack-plugin.js",
+  "types": "dist/reduce-enum-webpack-plugin.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "keywords": [
+    "webpack",
+    "plugin",
+    "enum",
+    "typescript",
+    "node",
+    "reduce enum"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "lint": "eslint --cache --fix",
+    "build": "tsc",
+    "release": "np",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.{ts,js}": [
+      "yarn lint"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baozouai/reduce-enum-webpack-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/baozouai/reduce-enum-webpack-plugin/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.36.0",
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "eslint": "^8.35.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "np": "^7.6.3",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0"
+  },
+  "peerDependencies": {
+    "webpack": ">=4.0.0 <6.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  }
+}

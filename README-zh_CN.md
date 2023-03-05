@@ -18,14 +18,16 @@
 
 </div>
 
-English | [中文](./README-zh_CN.md)
-## About
 
-A Webpack Plugin to reduce ts enum to js artifacts
+中文 | [英文](./README.md)
+
+## 关于
+
+一个用来减少 ts enum 转 js 产物的 webpack 插件
 
 eg:
 
-before add plugin：
+没加插件前：
 ```ts
 enum Status {
   PAID,
@@ -41,7 +43,7 @@ var Status;
 })(Status || (Status = {}))
 ```
 
-after add plugin：
+加插件后：
 ```ts
 enum Status {
   PAID,
@@ -56,8 +58,8 @@ var Status = {
 }
 ```
 
-`ts
-## 📦  Install
+
+## 📦  安装
 
 ```sh
 pnpm add reduce-enum-webpack-plugin -D
@@ -67,7 +69,7 @@ yarn add reduce-enum-webpack-plugin -D
 npm i reduce-enum-webpack-plugin -D
 ```
 
-##  🔨 Usage
+ ## 🔨 使用
 
 ```js
 const RuduceEnumWebpackPlugin = require('reduce-enum-webpack-plugin')
