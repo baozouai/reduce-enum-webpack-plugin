@@ -56,7 +56,7 @@ var Status = {
 }
 ```
 
-`ts
+
 ## 📦  Install
 
 ```sh
